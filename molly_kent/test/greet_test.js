@@ -15,7 +15,10 @@ describe('the greet 2 object', function() {
  it('should greet someone by name', function() {
   expect(greet2.greet('test')).to.eql('hello test');
  });
- // it('should do some stuff', function() {
- //  throw new Error('what will happen?');
- // });
 });
+
+describe('the command line utility', function() {
+  it('should greet someone by the name they enter', function() {
+    expect(greet2.greet(process.argv[2])).to.eql('hello ' + process.argv[2]);
+  })
+})
