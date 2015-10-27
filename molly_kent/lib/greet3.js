@@ -1,12 +1,12 @@
 'use strict';
 
-var greet = exports = module.exports = function() {
-  return 'insert evil laugh here';
+var Greet = exports = module.exports = function() {
+  this.greeting = 'insert evil laugh here';
+  this.farewell = 'ttfn';
 };
 
-console.log(greet());
-// this will fire off when it gets required, so the console.log shows up in Node
-
-// the function also gets stored in the variable greet so it can be modified later
+Greet.prototype.greet = function() {
+  return this.greeting;
+}
 
 // HANDY for constructor functions and adding methods on the prototype down the line

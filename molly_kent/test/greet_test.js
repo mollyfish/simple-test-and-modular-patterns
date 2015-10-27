@@ -20,5 +20,5 @@ describe('the greet 2 object', function() {
 describe('the command line utility', function() {
   it('should greet someone by the name they enter', function() {
     expect(greet2.greet(process.argv[2])).to.eql('hello ' + process.argv[2]);
-  })
-})
+  });
+});
